@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="card">
       <div>{{film.title}}</div>
       <div>{{film.original_title}}</div>
       <div>{{film.original_language}}</div>
@@ -19,6 +19,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
