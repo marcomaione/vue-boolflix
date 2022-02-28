@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <MyHeader @search="getFilms"></MyHeader>
-    <MyMain></MyMain>
+    <MyMain :films="films"></MyMain>
+    <FilmsList></FilmsList>
   </div>
 </template>
 
 <script>
 import MyHeader from './components/MyHeader.vue'
 import MyMain from './components/MyMain.vue'
+import FilmsList from './components/FilmsList.vue'
 
 const axios = require('axios');
 
@@ -16,6 +18,7 @@ export default {
   components: {
     MyHeader,
     MyMain,
+    FilmsList,
   },
   data() {
     return {
