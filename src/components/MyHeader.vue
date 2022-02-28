@@ -1,17 +1,23 @@
 <template>
-  <div class="up">
-      <h1>BOOLFLIX</h1>
-      <div class="cerca">
-          <input type="text">
-          <button>cerca</button>
-      </div>
-
-  </div>
+    <form>
+        <div class="up">
+            <h1>BOOLFLIX</h1>
+            <div class="cerca">
+                <input type="text" v-model="searchText">
+                <button type="submit" @click.prevent="$emit('search', searchText)">cerca</button>
+            </div>
+        </div>
+    </form>
 </template>
 
 <script>
 export default {
     name:"MyHeader",
+    data() {
+        return {
+            searchText:''
+        }
+    }
 
 }
 </script>

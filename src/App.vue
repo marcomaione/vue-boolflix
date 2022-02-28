@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MyHeader></MyHeader>
+    <MyHeader @search="getFilms"></MyHeader>
     <MyMain></MyMain>
   </div>
 </template>
@@ -17,11 +17,20 @@ export default {
     MyHeader,
     MyMain,
   },
+  data() {
+    return {
+      films: []
+
+    }
+
+  },
   methods: {
-    getFilm() {
-      axios.get('https://api.themoviedb.org/3/search/movie?api_key=431bdbe406cda6cf376d9ec554586227&query=star Wars')
+    getFilms(keyWord) {
+      console.log(keyWord);
+      axios.get('https://api.themoviedb.org/3/search/movie?api_key=431bdbe406cda6cf376d9ec554586227&query=' + keyWord +'')
       .then((response) => {
-        this.MyMain = response.data.response;
+        this.films = response.data.results;
+        console.log(response);
 
       })
     }
@@ -30,5 +39,7 @@ export default {
 </script>
 
 <style lang="scss">
+
+
 
 </style>
