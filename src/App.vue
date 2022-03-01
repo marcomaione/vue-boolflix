@@ -22,7 +22,9 @@ export default {
   },
   data() {
     return {
-      films: []
+      films: [],
+      api_key: '431bdbe406cda6cf376d9ec554586227',
+      language: 'it-IT'
 
     }
 
@@ -30,7 +32,7 @@ export default {
   methods: {
     getFilms(keyWord) {
       console.log(keyWord);
-      axios.get('https://api.themoviedb.org/3/search/movie?api_key=431bdbe406cda6cf376d9ec554586227&query=' + keyWord +'')
+      axios.get('https://api.themoviedb.org/3/search/movie?api_key=' + this.api_key + '&query=' + keyWord + '&language' + this.language)
       .then((response) => {
         this.films = response.data.results;
         console.log(response);
