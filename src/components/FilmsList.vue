@@ -1,10 +1,8 @@
 <template>
-<section>
-  <h1>Elenco film</h1>
   <ul>
     <MyCard v-for="(film, index) in films" :key="index" :info='film'></MyCard>
   </ul>
-</section>
+
 
 </template>
 

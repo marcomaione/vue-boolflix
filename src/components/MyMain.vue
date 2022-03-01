@@ -2,7 +2,6 @@
   <div class="container">
     <FilmsList :films='films'></FilmsList>
     <SeriesList :series='series'></SeriesList>
-
   </div>
 </template>
 
@@ -34,7 +33,6 @@
     background-color:#434343;
     width: 100%;
     min-height: calc(100vh - 80px);
-    display: flex;
 }
 
 </style>

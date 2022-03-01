@@ -1,10 +1,8 @@
 <template>
-  <section>
-    <h1>Elenco serie tv</h1>
     <ul>
-      <Mycard v-for="(serie, index) in series" :key="index" :info='serie'></Mycard>
+      <h1>Elenco serie tv</h1>
+      <MyCard v-for="(serie, index) in series" :key="index" :info='serie'></MyCard>
     </ul>
-  </section>
 </template>
 
 <script>
