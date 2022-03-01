@@ -1,6 +1,6 @@
 <template>
     <li class="card">
-        <div>{{info.title}}</div>
+        <div>{{getTitle()}}</div>
         <div>{{info.original_title}}</div>
         <div>
             <img v-if="languages.includes(info.original_language)" :src="require('../../assets/flags/' + info.original_language + '.png')">
@@ -20,6 +20,15 @@ export default {
     data() {
         return {
             languages: ['en', 'it'],
+        }
+    },
+    methods: {
+        getTitle() {
+            if (this.info.title) {
+                return this.info.title;
+            }else {
+                return this.info.name;
+            }
         }
     }
 
