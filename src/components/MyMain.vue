@@ -12,7 +12,8 @@
   
   name:"MyMain",
   props: {
-   'films': Array
+   'films': Array,
+   'series': Array
   },
   components: { 
     FilmsList 
