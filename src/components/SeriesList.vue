@@ -1,22 +1,24 @@
 <template>
-  <ul>
-    <Mycard v-for="(serie, index) in series" :key="index" :info='serie'></Mycard>
-  </ul>
+  <section>
+    <h1>Elenco serie tv</h1>
+    <ul>
+      <Mycard v-for="(serie, index) in series" :key="index" :info='serie'></Mycard>
+    </ul>
+  </section>
 </template>
 
 <script>
 
-import MyCard from './partials/MyCard.vue';
+import MyCard from './partials/MyCard.vue'
 
 export default {
-    name:"SeriesList",
-    props: {
-        'series': Array
-    },
-    components: {
-     MyCard
-
-    }
+  name:"SeriesList",
+  props: {
+    'series': Array
+  },
+  components: {
+    MyCard
+  }
 
 }
 </script>
