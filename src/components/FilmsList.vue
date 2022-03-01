@@ -1,7 +1,7 @@
 <template>
-  <ul>
+  <div class="card">
     <MyCard v-for="(film, index) in films" :key="index" :info='film'></MyCard>
-  </ul>
+  </div>
 
 
 </template>
@@ -23,6 +23,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
