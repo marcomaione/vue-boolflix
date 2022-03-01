@@ -1,12 +1,14 @@
 <template>
   <div class="container">
     <FilmsList :films='films'></FilmsList>
+    <SeriesList :series='series'></SeriesList>
 
   </div>
 </template>
 
 <script>
   import FilmsList from './FilmsList.vue'
+  import SeriesList from './SeriesList.vue'
 
   export default {
   
@@ -16,7 +18,8 @@
    'series': Array
   },
   components: { 
-    FilmsList 
+    FilmsList,
+    SeriesList 
   }
 }
 </script>
