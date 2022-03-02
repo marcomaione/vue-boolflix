@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="cardFilm">
     <MyCard v-for="(film, index) in films" :key="index" :info='film'></MyCard>
   </div>
 
@@ -24,5 +24,14 @@ export default {
 </script>
 
 <style lang="scss">
+.cardFilm {
+  width: 90%;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
 
 </style>

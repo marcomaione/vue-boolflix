@@ -1,9 +1,9 @@
 <template>
     <div class="card">
-        <div>{{getTitle()}}</div>
-        <div>{{info.original_title}}</div>
         <img v-if="info.poster_path" :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`">
         <img v-else :src="'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled.png'">
+        <h3>{{getTitle()}}</h3>
+        <h3>{{info.original_title}}</h3>
         <div class="flag">
             <img v-if="languages.includes(info.original_language)" :src="require('../../assets/flags/' + info.original_language + '.png')">
             <span v-else>{{info.original_language}}</span>
@@ -43,6 +43,14 @@ export default {
 </script>
 
 <style lang="scss">
+.card {
+    width: 300px;
+    margin:25px 10px;
+}
+.card img {
+    max-width: 300px;
+    border: solid 1px wheat;
+}
 .flag img {
     max-width: 30px;
 }.star i {

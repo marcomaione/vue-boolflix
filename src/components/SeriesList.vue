@@ -1,8 +1,8 @@
 <template>
-    <ul>
+    <div>
       <h1>Elenco serie tv</h1>
       <MyCard v-for="(serie, index) in series" :key="index" :info='serie'></MyCard>
-    </ul>
+    </div>
 </template>
 
 <script>
