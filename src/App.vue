@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MyHeader @search="getFilms"></MyHeader>
+    <MyHeader @search="dosearch"></MyHeader>
     <MyMain :films="films" :series="series"></MyMain>
     <FilmsList></FilmsList>
   </div>
@@ -48,6 +48,7 @@ export default {
       axios.get('https://api.themoviedb.org/3/search/tv?api_key=' + this.api_key + '&query=' + keyWord + '&language' + this.language)
       .then((response) => {
         this.series = response.data.results;
+
       })
     }
   }
