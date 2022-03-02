@@ -46,6 +46,9 @@ export default {
 .card {
     width: 300px;
     margin:25px 10px;
+    h3 {
+        color:rgb(218, 211, 211);
+    }
 }
 .card img {
     max-width: 300px;
